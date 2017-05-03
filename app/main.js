@@ -21,7 +21,7 @@ Reveal.initialize({
   transition: query.transition || 'slide',
   dependencies: [
     {
-      src: './node_modules/reveal.js/plugin/markdown/marked.js',
+      src: './node_modules/marked/marked.min.js',
       condition: function () {
         return !!document.querySelector('[data-markdown]');
       }
