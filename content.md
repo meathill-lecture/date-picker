@@ -77,9 +77,10 @@ description: a full tutorail of date-picker
   <div class="col" markdown="1">
     <ol>
       <li>开发一个日历控件</li>
-      <li>主要在手机端使用，包括公众号</li>
+      <li>主要在手机浏览器中使用，包括公众号</li>
       <li>点击日期输入框，弹出控件，选择日期，收起控件</li>
       <li>尽量独立，少依赖，少引入框架</li>
+      <li>样式如图</li>
     </ol>
   </div>
 </div>
@@ -148,6 +149,18 @@ description: a full tutorail of date-picker
 
 <!-- page -->
 
+## 工作方式
+
+1. 自动初始化页面中的特定输入框
+2. 配置信息写在文本框上
+3. 点击后，生成一个控件并绑定在输入框
+
+<!-- section -->
+
+![日历组件流程图](./img/flow.svg)<!-- .element: class="bg-w" -->
+
+<!-- page -->
+
 ## NPM
 
 Node Package Manager = Node 包管理工具
@@ -155,6 +168,14 @@ Node Package Manager = Node 包管理工具
 1. 管理依赖
 2. 发布我们自己的包
 3. 记录常用脚本
+
+<!-- page -->
+
+## Stylus
+
+1. CSS 预处理工具
+2. 简单方便快捷，基于 Node.js
+3. 支持变量、函数、循环
 
 <!-- page -->
 
@@ -166,7 +187,7 @@ Node Package Manager = Node 包管理工具
 
 <!-- page -->
 
-### 2. 初始化 NPM
+### 2. 创建 package.json
 
 <!-- page -->
 
@@ -191,3 +212,4 @@ Q&A
 参考阅读：
 
 * [Using a package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
+* [Stylus](http://stylus-lang.com/)
