@@ -41,7 +41,7 @@
 
 每节课的代码会打相应的 tag。
 
-[第一课]()
+[第一课](https://github.com/meathill-lecture/date-picker/tree/lesson1)
 
 ## 源项目地址
 
