@@ -35,24 +35,29 @@ description: a full tutorail of date-picker
 
 <!-- section -->
 
-5. Webpack + Babel + ES6 配置
-6. JavaScript 开发
+5. Webpack + Babel 配置
+6. 使用 ES6 开发 JavaScript
 7. 使用 Mocha + should.js 测试
-8. 使用 Handlebars 处理模板
 <!-- .element: start="5" -->
 
 <!-- section -->
 
-9. UI 自动化测试
-10. Gulp 打包
-11. 需求有变！增加时间段选择
-12. Bug 来了！微信下有问题
-<!-- .elment: start="9" -->
+8. 使用 Handlebars 处理模板
+9. 完成 UI 开发和测试
+10. 使用策略模式解决分支需求
+<!-- .element: start="8" -->
 
 <!-- section -->
 
-13. 使用 GitHub Pages 搭建文档网站
-14. 回顾，总结
+11. Gulp 打包
+12. 配置 Webpack 适应不同环境的打包 
+13. 使用 Weinre 解决微信下的问题
+<!-- .elment: start="11" -->
+
+<!-- section -->
+
+14. 使用 GitHub Pages 搭建文档网站
+15. 回顾，总结
 <!-- .element: start="13" -->
 
 <!-- page -->
@@ -60,7 +65,7 @@ description: a full tutorail of date-picker
 ## 第一讲
 
 1. 项目启动 & 需求分析
-2. NPM & package.json
+2. NPM & package.json 
 3. Stylus
 4. 开发静态 HTML
 
@@ -141,19 +146,49 @@ description: a full tutorail of date-picker
 
 <!-- section -->
 
+### Stylus -> CSS
+
+1. 使用预处理工具，方便开发
+2. 简单方便快捷，基于 Node.js
+3. 支持变量、函数、循环
+4. 丰富的内建函数
+
+<!-- section -->
+
 ### 语言
 
 1. ES6 Class
 2. Webpack + Babel
-3. JS、CSS 分开打包
+4. 完整的测试用例
+
+<!-- section -->
+
+### 提交物料
+
+1. 最终文件 CSS、JS 各一个
+2. 源代码
+3. 使用文档
 
 <!-- page -->
 
-## 工作方式
+## 这套方案的优势
 
-1. 自动初始化页面中的特定输入框
-2. 配置信息写在文本框上
-3. 点击后，生成一个控件并绑定在输入框
+1. 使用比较简单，嵌入资源文件即可
+2. 使用 jQuery，前后兼容性好，对方容易接手
+3. 源代码保持最大的弹性，方便扩展开发
+4. 
+
+<!-- page -->
+
+## 工作流程
+
+1. 将事件绑定在 `<body>` 上
+2. 配置信息使用 `data-*` 写在 `<input>` 上
+3. 用户点击 `input[type=text].tqb-date-picker` 后
+    1. 如果此文本框尚无日历元素
+    2. 则生成一个元素并绑定
+4. 弹出日历窗口
+5. 用户点击后选中日期
 
 <!-- section -->
 
@@ -161,7 +196,15 @@ description: a full tutorail of date-picker
 
 <!-- page -->
 
-## NPM
+## 开工！！
+
+<!-- page -->
+
+## 1. 初始化项目
+
+<!-- section -->
+
+### NPM
 
 Node Package Manager = Node 包管理工具
 
@@ -169,25 +212,19 @@ Node Package Manager = Node 包管理工具
 2. 发布我们自己的包
 3. 记录常用脚本
 
-<!-- page -->
+<!-- section -->
 
-## Stylus
+### package.json
 
-1. CSS 预处理工具
-2. 简单方便快捷，基于 Node.js
-3. 支持变量、函数、循环
+此项目的配置信息，可被 NPM 读取。
 
-<!-- page -->
-
-## 开工！！
+1. 版本、内容、作者等描述
+2. 依赖：运行时依赖 & 开发时依赖
+3. 可执行脚本
 
 <!-- page -->
 
-### 1. 创建项目
-
-<!-- page -->
-
-### 2. 创建 package.json
+## 2. 配置 Stylus
 
 <!-- page -->
 
@@ -203,9 +240,10 @@ Q&A
 
 <!-- page -->
 
-完整代码仓库：
+完整项目代码仓库：
 
-[Github meathill-freelance/date-picker](https://github.com/meathill-freelance/date-picker)
+* [Github meathill-freelance/date-picker](https://github.com/meathill-freelance/date-picker)
+* [线上文档](https://meathill-freelance.github.io/data-picker/)
 
 <!-- page -->
 
