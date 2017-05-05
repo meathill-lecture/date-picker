@@ -200,6 +200,13 @@ description: a full tutorail of date-picker
 
 <!-- page -->
 
+## 0. 准备阶段
+
+1. 安装 node.js
+2. 安装 Stylus
+
+<!-- page -->
+
 ## 1. 初始化项目
 
 <!-- section -->
@@ -236,10 +243,6 @@ Q&A
 
 <!-- page -->
 
-## 第二讲
-
-<!-- page -->
-
 完整项目代码仓库：
 
 * [Github meathill-freelance/date-picker](https://github.com/meathill-freelance/date-picker)
@@ -251,3 +254,9 @@ Q&A
 
 * [Using a package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
 * [Stylus](http://stylus-lang.com/)
+* [ES6](http://es6.ruanyifeng.com)
+* []
+
+<!-- page -->
+
+## 第二讲

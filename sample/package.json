@@ -1,0 +1,16 @@
+{
+  "name": "date-picker-sample",
+  "version": "0.1.0",
+  "description": "a date-picker sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stylus:watch": "stylus -w styl/ -o css/"
+  },
+  "author": "Meathill <meathill@gmail.com> (http://meathill.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
+  }
+}
