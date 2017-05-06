@@ -255,7 +255,6 @@ Q&A
 * [Using a package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
 * [Stylus](http://stylus-lang.com/)
 * [ES6](http://es6.ruanyifeng.com)
-* []
 
 <!-- page -->
 
