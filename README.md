@@ -37,7 +37,7 @@
 
 ## 范例代码
 
-[./sample/](./sample/)
+[./sample/](date-picker/)
 
 每节课的代码会打相应的 tag。
 

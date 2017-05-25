@@ -27,7 +27,9 @@ gulp.task('stylus', () => {
     .pipe(stylus({
       compress: true
     }))
-    .pipe(clean())
+    .pipe(clean({
+      level: 2
+    }))
     .pipe(gulp.dest(`${DOC}css/`));
 });
 

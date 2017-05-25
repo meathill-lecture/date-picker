@@ -14,18 +14,6 @@ description: a full tutorail of date-picker
 
 <!-- page -->
 
-## 教学目标
-
-通过学习本系列教程，可以了解现代化前端开发的方方面面：
-
-1. 学会搭建开发环境，使用 Webpack、Babel、Stylus、Gulp 等工具
-3. 了解测试驱动开发，学会写测试用例、自动化测试
-4. 学会打包发布代码
-5. 学会用 GitHub Pages 维护产品文档
-6. 学会写类似的组件
-
-<!-- page -->
-
 ## 课程大纲
 
 1. 项目启动 & 需求分析
@@ -62,12 +50,25 @@ description: a full tutorail of date-picker
 
 <!-- page -->
 
+## 教学目标
+
+通过学习本系列教程，可以了解现代化前端开发的方方面面：
+
+1. 学会搭建开发环境，使用 Webpack、Babel、Stylus、Gulp 等工具
+3. 了解测试驱动开发，学会写测试用例、自动化测试
+4. 学会打包发布代码
+5. 学会用 GitHub Pages 维护产品文档
+6. 学会写类似的组件
+
+<!-- page -->
+
 ## 第一讲
 
 1. 项目启动 & 需求分析
-2. NPM & package.json 
-3. Stylus
-4. 开发静态 HTML
+2. 技术选型
+3. 流程图
+4. [实战] 初始化项目
+5. [实战] 开发静态 HTML
 
 <!-- page -->
 
@@ -239,6 +240,318 @@ Node Package Manager = Node 包管理工具
 
 <!-- page -->
 
+### 实战：手机日历组件 第二讲
+# ES6 & 测试
+
+#### [@meathill](https://weibo.com/meathill/)
+
+<!-- page -->
+
+{{> author}}
+
+<!-- page -->
+
+## 课程大纲
+
+1. ES2015（ES6）简介
+2. Webpack + Babel 配置
+3. 使用 ES6 开发 JavaScript
+3. 使用 Mocha + should.js 测试
+
+<!-- page -->
+
+### 教学目标
+
+## 1. 了解 ES2015
+
+1. `let` 和 `const`
+2. 变量解构
+3. 箭头函数
+4. `Class` 和 `Module`
+5. 模板字符串
+
+<!-- page -->
+
+## 2. 了解测试
+
+1. 为什么要写测试？
+2. 什么是单元测试？怎么写？
+3. 怎么开始写测试？
+
+<!-- page -->
+
+## 3. 测试驱动开发
+
+<!-- page -->
+
+## 了解 ES2015
+
+<!-- section -->
+
+ES 
+
+= ECMAScript
+ 
+= 由 ECMA 国际（前身为欧洲计算机制造商协会）通过 ECMA-262标准化的脚本程序设计语言。
+
+<!-- section -->
+
+* JavaScript 是 ECMAScript 的一种方言
+* JavaScript 增加了 DOM 和 BOM
+* 目前通行的是 ES5，主流浏览器部分或全部支持 ES6
+
+<!-- section -->
+
+* ES5 = ES6 之前的规范
+* ES6 = ES2015
+* ES7 = ES2016 + ES2017
+* ES8 = ES2018（讨论中）
+* ES9 = ES2019（征集想法中）
+
+<!-- page -->
+
+## JavaScript 的历史
+
+<!-- section -->
+
+### 妾本出身贫寒家，未想尊威仪天下
+
+1. 为校验表单而生
+2. 只花了10天就设计出原型
+3. 连名字都是山寨的……
+
+<!-- section -->
+
+### 江山代有才人出，各领风骚数百年
+
+1. JScript
+2. Flash，ActionX
+3. SilverLight，JavaFX
+
+<!-- section -->
+
+### 天下逐鹿，终归秦属
+
+1. ES3 大体上统一了 JavaScript
+2. ES4 夭折
+3. HTML5 获得浏览器之争的最终胜利
+4. ES5 诞生
+5. ES6 诞生
+
+<!-- page -->
+
+> ES2015 增加了很多优秀的新特性，可以让我们开发出更强壮，更好维护的代码。
+
+> 以后的开发，都应当以 ES2015 为基础。 
+
+<!-- page --> 
+
+## ES2015 新特性
+ 
+<!-- page -->
+ 
+### `let` & `const`
+ 
+1. 声明变量 `let a = 1;` 
+2. 声明常量 `let B = 2;` 
+3. 块级作用域 [code](./sample/let-const.js)
+4. 没有变量提升 [code](./sample/let-const-2.js)
+
+<!-- page -->
+
+### 变量解构
+
+1. 解构数组 `let [a, b, c] = [1, 2, 3];`
+2. 数组拆分 `let [a, ...b] = [1, 2, 3, 4];`
+3. 解构对象 `let {a, b, c} = {a: 1, b: 2, c: 3};`
+
+<!-- section -->
+
+常见用法：函数返回多个值
+
+```javascript
+function sample() {
+  return {
+    a: 1,
+    b: 2,
+    c: 3
+  };
+}
+let {a, b, c} = sample();
+```
+
+<!-- section -->
+
+常见用法：作为函数参数
+
+```javascript
+function sample({id, name, age, sex, height, photo}) {
+  // do something
+}
+sample({
+  id: 1,
+  name: 'meathill',
+  age: 33,
+  sex: MALE,
+  height: 181,
+  photo: './photo.jpg'
+})
+```
+
+<!-- page -->
+
+### 箭头函数
+
+```javascript
+let func = (p1, p2) => {
+  // do something
+}
+```
+
+* 箭头函数的 `this` 固定指向声明它的对象
+
+<!-- page -->
+
+### Class
+
+```javascript
+class A {
+  constructor() {
+    // 构造函数
+    
+    // 声明实例属性
+    this.var1 = '';
+  }
+  
+  method1() {
+    
+  }
+  
+  method2() {
+    
+  }
+}
+```
+
+<!-- section -->
+
+几个常见的点：
+
+1. 这里的类仍然是原型继承
+2. `class` 关键词不存在变量提升
+3. 子类构造函数里，必须 `super()` 之后才有 `this`
+
+<!-- page -->
+
+### Module
+
+终于有模块机制了！
+
+```javascript
+// profile.js
+export let name = 'Meathill';
+export let age = 33;
+export let weight = 100;
+
+// user.js
+import {name, age, weight} from './profile.js'
+```
+
+<!-- section -->
+
+默认值
+
+```javascript
+// profile.js
+export default name = 'Meathill';
+export let age = 33;
+export let weight = 100;
+
+// user.js
+import anyname from './profile.js';
+```
+
+<!-- page -->
+
+### 模板字符串
+
+```javascript
+let name = 'Meathill';
+let age = 33;
+let favor = 'Gakki';
+
+alert(`Hi, I'm ${name}，I'm ${age}, I like ${favor}`);
+// Hi, I'm Meathill, I'm 33, I like Gakki
+```
+
+1. 支持 `.` 运算符，如 ``Hi, ${user.name}``
+2. 支持换行
+
+<!-- page -->
+
+## 测试与单元测试
+
+<!-- page -->
+
+### 我对测试的态度
+
+1. 开发人员必须了解测试
+2. 开发人员应该自己写测试
+3. 小公司不需要配置专门测试
+
+<!-- section -->
+
+### 为什么要写测试？
+
+1. 稳定质量
+2. 方便重构
+3. 提升开发效率
+
+<!-- section -->
+
+### 什么是单元测试？
+
+> 在计算机编程中，单元测试（英语：Unit Testing）又称为模块测试, 是针对程序模块（软件设计的最小单位）来进行正确性检验的测试工作。 程序单元是应用的最小可测试部件。
+
+<!-- section -->
+
+### 怎么写单元测试？
+
+以 Node.js 为例
+
+```javascript
+const assert = require('assert');
+
+assert.equal(1, '1'); // 1 == '1' true
+```
+
+<!-- section -->
+
+核心概念：
+
+1. 断言
+2. 边界条件
+
+<!-- page -->
+
+### 怎么开始写单元测试？
+
+1. 如果要重构，先写测试
+2. 比较重要的操作，先写测试
+3. 项目进度相对宽松，先写测试
+
+> 总之，测试不嫌少，能写赶紧写。
+
+<!-- page -->
+
+## 测试驱动开发
+
+1. Test Driven Development
+2. 先想怎么用，而不是先想怎么写
+3. 适用于前期规划项目
+
+<!-- page -->
+
 Q&A
 
 <!-- page -->
@@ -255,7 +568,4 @@ Q&A
 * [Using a package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
 * [Stylus](http://stylus-lang.com/)
 * [ES6](http://es6.ruanyifeng.com)
-
-<!-- page -->
-
-## 第二讲
+* [Wiki ECMAScript](https://zh.wikipedia.org/wiki/ECMAScript)
