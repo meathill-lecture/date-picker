@@ -254,9 +254,8 @@ Node Package Manager = Node 包管理工具
 ## 课程大纲
 
 1. ES2015（ES6）简介
-2. Webpack + Babel 配置
-3. 使用 ES6 开发 JavaScript
-3. 使用 Mocha + should.js 测试
+2. 使用 ES6 开发 JavaScript
+3. 使用 Mocha.js + Should.js 搭建测试环境
 
 <!-- page -->
 
@@ -282,6 +281,8 @@ Node Package Manager = Node 包管理工具
 <!-- page -->
 
 ## 3. 测试驱动开发
+
+#### [实战]
 
 <!-- page -->
 
@@ -326,7 +327,7 @@ ES
 ### 江山代有才人出，各领风骚数百年
 
 1. JScript
-2. Flash，ActionX
+2. Flash，ActiveX
 3. SilverLight，JavaFX
 
 <!-- section -->
@@ -354,7 +355,7 @@ ES
 ### `let` & `const`
  
 1. 声明变量 `let a = 1;` 
-2. 声明常量 `let B = 2;` 
+2. 声明常量 `const B = 2;` 
 3. 块级作用域 [code](./sample/let-const.js)
 4. 没有变量提升 [code](./sample/let-const-2.js)
 
@@ -376,7 +377,7 @@ let [a, b, c] = [1, 2, 3];
 
 <!-- section -->
 
-只要两边模式对照一致，可以有很多中拆法：
+只要两边模式对照一致，可以有很多种拆法：
 
 ```javascript
 let [a, ...b] = [1, 2, 3, 4];
@@ -403,7 +404,7 @@ let {b, c, a} = {a: 1, b:2, c: 3};
 // a = 1
 // b = 2
 // c = 3
-````
+```
 
 <!-- section -->
 
@@ -447,14 +448,18 @@ let f1 = p1 => {
   // do something
 };
 
-let f2 = (p1, p2) => {
+let f2 = p1 => p1 * 100;
+// 等价于
+let f2 = p1 => {
+  return p1 * 100;
+}
+
+let f3 = (p1, p2) => {
   // do something
 };
 
-let f3 = p1 => p1 * 100;
-// 等价于
-let f3 = p1 => {
-  return p1 * 100;
+let f4 = ([p1, p2]) => {
+  // do something
 }
 ```
 
@@ -518,7 +523,7 @@ import {name, age, weight} from './profile'
 
 ```javascript
 // profile.js
-export default name = 'Meathill';
+export default 'Meathill';
 export let age = 33;
 export let weight = 100;
 
@@ -570,6 +575,7 @@ alert(`Hi, I'm ${name}，I'm ${age}, I like ${favor}`);
 ### 什么是单元测试？
 
 > 在计算机编程中，单元测试（英语：Unit Testing）又称为模块测试, 是针对程序模块（软件设计的最小单位）来进行正确性检验的测试工作。 程序单元是应用的最小可测试部件。
+
 > [Wiki](https://zh.wikipedia.org/zh-hans/单元测试)
 
 <!-- section -->
@@ -597,7 +603,7 @@ assert.equal(1, '1'); // 1 == '1' true
 
 1. 如果要重构，先写测试
 2. 比较重要的操作，先写测试
-3. 项目进度相对宽松，先写测试
+3. 如果要修复 Bug，先写测试
 
 > 总之，测试不嫌少，能写赶紧写。
 
