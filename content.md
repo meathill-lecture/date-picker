@@ -267,8 +267,9 @@ Node Package Manager = Node 包管理工具
 1. `let` 和 `const`
 2. 变量解构
 3. 箭头函数
-4. `Class` 和 `Module`
-5. 模板字符串
+4. `Class`
+5. `Module`
+6. 模板字符串
 
 <!-- page -->
 
@@ -284,7 +285,7 @@ Node Package Manager = Node 包管理工具
 
 <!-- page -->
 
-## 了解 ES2015
+## ES2015 / ES6
 
 <!-- section -->
 
@@ -297,8 +298,8 @@ ES
 <!-- section -->
 
 * JavaScript 是 ECMAScript 的一种方言
-* JavaScript 增加了 DOM 和 BOM
-* 目前通行的是 ES5，主流浏览器部分或全部支持 ES6
+* 浏览器中的 JavaScript 增加了 DOM 和 BOM
+* 目前 ES5 基本完成普及，主流浏览器部分或全部支持 ES6
 
 <!-- section -->
 
@@ -361,9 +362,48 @@ ES
 
 ### 变量解构
 
-1. 解构数组 `let [a, b, c] = [1, 2, 3];`
-2. 数组拆分 `let [a, ...b] = [1, 2, 3, 4];`
-3. 解构对象 `let {a, b, c} = {a: 1, b: 2, c: 3};`
+Destructuring
+
+按照一定模式，从数组和对象中提取值。
+
+```javascript
+// 解构数组
+let [a, b, c] = [1, 2, 3];
+// a = 1;
+// b = 2;
+// c = 3;
+```
+
+<!-- section -->
+
+只要两边模式对照一致，可以有很多中拆法：
+
+```javascript
+let [a, ...b] = [1, 2, 3, 4];
+// a = 1
+// b = [2, 3, 4]
+
+let [a, , b] = [1, 2, 3];
+// a = 1
+// b = 3
+```
+
+<!-- section -->
+
+解构对象
+ 
+```javascript
+let {a, b, c} = {a: 1, b: 2, c: 3};
+// a = 1
+// b = 2
+// c = 3
+
+// 解构对象只关注键名，不关注顺序
+let {b, c, a} = {a: 1, b:2, c: 3};
+// a = 1
+// b = 2
+// c = 3
+````
 
 <!-- section -->
 
@@ -395,7 +435,7 @@ sample({
   sex: MALE,
   height: 181,
   photo: './photo.jpg'
-})
+});
 ```
 
 <!-- page -->
@@ -403,8 +443,18 @@ sample({
 ### 箭头函数
 
 ```javascript
-let func = (p1, p2) => {
+let f1 = p1 => {
   // do something
+};
+
+let f2 = (p1, p2) => {
+  // do something
+};
+
+let f3 = p1 => p1 * 100;
+// 等价于
+let f3 = p1 => {
+  return p1 * 100;
 }
 ```
 
@@ -420,7 +470,7 @@ class A {
     // 构造函数
     
     // 声明实例属性
-    this.var1 = '';
+    this.var = '';
   }
   
   method1() {
@@ -454,7 +504,12 @@ export let age = 33;
 export let weight = 100;
 
 // user.js
-import {name, age, weight} from './profile.js'
+import * as user from './profile'
+// user.name = 'Meathill';
+// user.age = 33;
+// user.weight = 100;
+// 亦可使用解构方法
+import {name, age, weight} from './profile'
 ```
 
 <!-- section -->
@@ -484,8 +539,9 @@ alert(`Hi, I'm ${name}，I'm ${age}, I like ${favor}`);
 // Hi, I'm Meathill, I'm 33, I like Gakki
 ```
 
-1. 支持 `.` 运算符，如 ``Hi, ${user.name}``
+1. 支持运算符，如 `Hi, ${user.name}` `${a * 3}`
 2. 支持换行
+3. 尽量不要在里面使用复杂的运算
 
 <!-- page -->
 
@@ -496,22 +552,25 @@ alert(`Hi, I'm ${name}，I'm ${age}, I like ${favor}`);
 ### 我对测试的态度
 
 1. 开发人员必须了解测试
+    1. 测试用例
+    2. 边界条件
+    3. 回归测试
 2. 开发人员应该自己写测试
-3. 小公司不需要配置专门测试
+    1. 稳定质量
+    2. 方便重构
+    3. 提升开发效率
+3. 不用追求测试覆盖率
 
 <!-- section -->
 
-### 为什么要写测试？
-
-1. 稳定质量
-2. 方便重构
-3. 提升开发效率
+### 单元测试
 
 <!-- section -->
 
 ### 什么是单元测试？
 
 > 在计算机编程中，单元测试（英语：Unit Testing）又称为模块测试, 是针对程序模块（软件设计的最小单位）来进行正确性检验的测试工作。 程序单元是应用的最小可测试部件。
+> [Wiki](https://zh.wikipedia.org/zh-hans/单元测试)
 
 <!-- section -->
 
@@ -534,7 +593,7 @@ assert.equal(1, '1'); // 1 == '1' true
 
 <!-- page -->
 
-### 怎么开始写单元测试？
+### 我以前没写过，现在要怎么开始？
 
 1. 如果要重构，先写测试
 2. 比较重要的操作，先写测试
@@ -549,6 +608,17 @@ assert.equal(1, '1'); // 1 == '1' true
 1. Test Driven Development
 2. 先想怎么用，而不是先想怎么写
 3. 适用于前期规划项目
+
+<!-- page -->
+
+## 工具
+
+* [Mocha.js](https://mochajs.org/)
+* [Should.js](https://shouldjs.github.io/)
+
+<!-- page -->
+
+## Coding
 
 <!-- page -->
 
@@ -569,3 +639,4 @@ Q&A
 * [Stylus](http://stylus-lang.com/)
 * [ES6](http://es6.ruanyifeng.com)
 * [Wiki ECMAScript](https://zh.wikipedia.org/wiki/ECMAScript)
+* [阮一峰 测试框架 Mocha 实例教程](http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
