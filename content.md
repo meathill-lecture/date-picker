@@ -3,7 +3,7 @@ title: date-picker-tutorail
 description: a full tutorail of date-picker
 -->
 
-## 实战
+### 实战
 # 手机日历组件
 
 #### [@meathill](https://weibo.com/meathill/)
@@ -23,16 +23,17 @@ description: a full tutorail of date-picker
 
 <!-- section -->
 
-5. Webpack + Babel 配置
+5. ES2015 简介
 6. 使用 ES6 开发 JavaScript
-7. 使用 Mocha + should.js 测试
+7. 使用 Mocha + should.js + Babel 测试
 <!-- .element: start="5" -->
 
 <!-- section -->
 
-8. 使用 Handlebars 处理模板
-9. 完成 UI 开发和测试
-10. 使用策略模式解决分支需求
+8. 搭建 Webpack + Babel 编译环境
+9. 使用 Handlebars 处理模板
+10. 完成 UI 开发和测试
+11. 使用策略模式解决分支需求
 <!-- .element: start="8" -->
 
 <!-- section -->
@@ -244,10 +245,6 @@ Node Package Manager = Node 包管理工具
 # ES6 & 测试
 
 #### [@meathill](https://weibo.com/meathill/)
-
-<!-- page -->
-
-{{> author}}
 
 <!-- page -->
 
@@ -628,6 +625,113 @@ assert.equal(1, '1'); // 1 == '1' true
 
 <!-- page -->
 
+### 实战：手机日历组件 第三讲
+# UI 开发 & 策略模式
+
+#### [@meathill](https://weibo.com/meathill/)
+
+<!-- page -->
+
+{{> author}}
+
+<!-- page -->
+
+## 课程大纲
+
+1. 使用 Webpack + Babel 搭建开发环境
+2. 开发 UI 界面
+3. 使用策略模式解决分支需求
+
+<!-- page -->
+
+### 教学目标
+
+1. 学会搭建 Webpack + Babel 开发环境
+2. 学会使用各种 Loader 解决问题
+3. 学会开发本插件
+4. 了解设计模式，学会使用策略模式
+
+<!-- page -->
+
+## Webpack 
+
+Webpack 是一个打包工具，降低 Web 中加载资源的难度。
+
+* [官网](https://doc.webpack-china.org/)
+* [文档](https://doc.webpack-china.org/configuration)
+* 当前版本：2.6.1
+
+<!-- section -->
+
+![webpack 示意图](https://webpack.js.org/bf093af83ee5548ff10fef24927b7cd2.svg)
+
+<!-- page -->
+
+## Babel
+
+Babel 是一个转译工具，将高版本的 JS 转译成低版本的 JS。亦可转译 JSX（React）。
+
+* [官网](https://babeljs.io/)
+* [文档](https://babeljs.io/docs/setup/#installation)
+* 当前版本：
+    * babel-core 6.24.1
+    * babel-loader 7.0.0
+
+<!-- section -->
+
+### Babel 入门
+
+1. 配置文件 [.babelrc](http://babeljs.io/docs/usage/babelrc/)
+2. 预设环境 [preset env](http://babeljs.io/docs/plugins/preset-env/)
+3. 插件
+
+<!-- page -->
+
+## 配置环境
+ 
+<!-- page -->
+
+## Coding
+
+<!-- page -->
+
+## 设计模式
+
+> 可复用面向对象软件的基础
+
+<!-- page -->
+
+### JavaScript 中的设计模式
+
+1. JS 有独特的语法，也有独特的实现模式
+2. ES6 与 ES5 的实现模式也相差甚远
+3. 使用设计模式有助于写出更好的代码，但不需要刻意追求模式，更不要照搬其它语言中的模式
+
+<!-- page -->
+
+### 策略模式
+
+> 定义一系列算法，把它们一个个封装起来，并且使它们可相互替换。
+
+1. 如果把所有可能用到的算法都写到一起，会使它变得巨大复杂难以维护
+2. 不同的时候需要不同的算法，一个类里不应包含它不支持的方法
+3. 新增同类型的需求时，增加算法和调整现有算法都会变得很困难
+
+<!-- page -->
+
+[回顾一下我们的需求](#/5/3)
+
+1. 点击日期后的处理
+2. 初始化日期的显示
+
+这两个需求差异，很适合用策略模式来处理。
+
+<!-- page -->
+
+## 继续 Coding
+
+<!-- page -->
+
 Q&A
 
 <!-- page -->
@@ -639,10 +743,36 @@ Q&A
 
 <!-- page -->
 
-参考阅读：
+## 参考阅读：
+
+<!-- section -->
+
+### 工具篇
+
+* [NPM](https://docs.npmjs.com/)
+* [Stylus](http://stylus-lang.com/)
+* [Babeljs](https://babeljs.io/)
+* [Mocha](https://mochajs.org/)
+* [Should.js](https://shouldjs.github.io/)
+* [Webpack](https://doc.webpack-china.org/)
+
+<!-- section -->
+
+### 工具使用篇
 
 * [Using a package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
-* [Stylus](http://stylus-lang.com/)
+* [阮一峰 测试框架 Mocha 实例教程](http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
+* [Babel 设置](https://babeljs.io/docs/setup/#installation)
+
+<!-- section -->
+
+### 知识篇
+
 * [ES6](http://es6.ruanyifeng.com)
 * [Wiki ECMAScript](https://zh.wikipedia.org/wiki/ECMAScript)
-* [阮一峰 测试框架 Mocha 实例教程](http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
+
+<!-- section -->
+
+### 图书篇
+
+* [JavaScript 设计模式](https://www.amazon.cn/图书/dp/B00D6MT3LG/ref=sr_1_3?ie=UTF8&qid=1496569116&sr=8-3&keywords=javascript+设计模式)
