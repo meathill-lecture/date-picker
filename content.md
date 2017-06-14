@@ -206,6 +206,19 @@ description: a full tutorail of date-picker
 
 1. 安装 node.js
 2. 安装 Stylus
+3. [可选] 安装 live-server
+
+<!-- section -->
+
+### live-server
+
+live-server 是开发服务器，基于 Node 实现，能够实现自动刷新。
+
+用法：
+
+```bash
+live-server --port=8081 --host=localhost --ignore=styl
+```
 
 <!-- page -->
 
