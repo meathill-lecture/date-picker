@@ -206,13 +206,13 @@ description: a full tutorail of date-picker
 
 1. 安装 node.js
 2. 安装 Stylus
-3. [可选] 安装 live-server
+3. [可选] 安装 [Live-server](http://tapiov.net/live-server/)
 
 <!-- section -->
 
-### live-server
+### Live-server
 
-live-server 是开发服务器，基于 Node 实现，能够实现自动刷新。
+Live-server 是开发服务器，基于 Node 实现，能够实现自动刷新。
 
 用法：
 
