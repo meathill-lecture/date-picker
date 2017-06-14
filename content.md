@@ -645,10 +645,6 @@ assert.equal(1, '1'); // 1 == '1' true
 
 <!-- page -->
 
-{{> author}}
-
-<!-- page -->
-
 ## 课程大纲
 
 1. 使用 Webpack + Babel 搭建开发环境
@@ -777,6 +773,82 @@ Babel 是一个转译工具，将高版本的 JS 转译成低版本的 JS。亦�
 
 <!-- page -->
 
+### 实战：手机日历组件 第四讲
+# 用 Gulp 打包发布吧！
+
+#### [@meathill](https://weibo.com/meathill/)
+
+<!-- page -->
+
+{{> author}}
+
+<!-- page -->
+
+## 课程大纲
+
+1. 为什么要后（批）处理？
+2. 使用 Gulp 进行批处理
+3. 使用 ESLint 工具进行代码审查
+
+<!-- page -->
+
+### 教学目标
+
+1. 了解什么是批处理，学会选用批处理工具
+2. 学会使用 Gulp 进行批处理
+3. 学会打包组件
+
+<!-- page -->
+
+## 为什么要批（后）处理？
+
+1. Stylus => CSS
+2. ES2015 => ES5
+3. node_modules => CDN
+4. 图片压缩
+5. 开发环境 => 生产环境
+
+<!-- page -->
+
+一些可能的抱怨：
+
+> 我直接写，写完直接 FTP 传上去多省事儿啊！
+
+> 遇到问题我登到 FTP 上改不就好了么？
+
+> 整这些乱七八糟的干嘛？
+
+<!-- page -->
+
+真的是这样么？
+
+<!-- section -->
+
+### “我直接写，写完直接 FTP 传上去多省事儿啊！”
+
+1. 文件多，难以确定哪些需要上传
+2. 无法区分开发环境与生产环境
+3. HTML/CSS/JavaScript 天生的缺陷
+
+<!-- section -->
+
+### “遇到问题我登到 FTP 上改不就好了么？”
+
+1. 版本管理的问题
+2. 缓存的问题
+
+<!-- page -->
+
+结论：
+
+> 使用中间代码 + 后处理是先进生产力的代表，可以提高开发、维护、部署效率，值得我们学习运用。
+
+<!-- page -->
+
+
+
+<!-- page -->
+
 Q&A
 
 <!-- page -->
@@ -800,6 +872,7 @@ Q&A
 * [Mocha](https://mochajs.org/)
 * [Should.js](https://shouldjs.github.io/)
 * [Webpack](https://doc.webpack-china.org/)
+* [ESLint](http://eslint.org/) | [ESLint 中文](http://eslint.cn/docs/user-guide/configuring)
 
 <!-- section -->
 
