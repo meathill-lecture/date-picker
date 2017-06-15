@@ -797,13 +797,14 @@ Babel 是一个转译工具，将高版本的 JS 转译成低版本的 JS。亦�
 1. 了解什么是批处理，学会选用批处理工具
 2. 学会使用 Gulp 进行批处理
 3. 学会打包组件
+4. 学会用 ESLint 审查代码
 
 <!-- page -->
 
 ## 为什么要批（后）处理？
 
 1. Stylus => CSS
-2. ES2015 => ES5
+2. ES2015/ES2017 => ES5
 3. node_modules => CDN
 4. 图片压缩
 5. 开发环境 => 生产环境
@@ -841,13 +842,13 @@ Babel 是一个转译工具，将高版本的 JS 转译成低版本的 JS。亦�
 
 结论：
 
-> 使用中间代码 + 后处理是先进生产力的代表，可以提高开发、维护、部署效率，我们应该学习运用。
+> 使用中间代码 + 后处理代表着先进生产力，可以提高开发、维护、部署效率，我们应该学习运用。
 
 <!-- page -->
 
 ## Gulp
 
-1. Ant => Grunt => Gulp
+1. Ant => Grunt => Gulp / npm script
 2. 速度快
 3. 用法简单，没有历史包袱
 
@@ -897,7 +898,7 @@ const sequence = require('run-sequence');
 const del = require('del');
 
 gulp.task('clear', () => {
-  del(['dist']);
+  return del(['dist']);
 });
 
 gulp.task('default', callback => {
