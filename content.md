@@ -841,11 +841,160 @@ Babel 是一个转译工具，将高版本的 JS 转译成低版本的 JS。亦�
 
 结论：
 
-> 使用中间代码 + 后处理是先进生产力的代表，可以提高开发、维护、部署效率，值得我们学习运用。
+> 使用中间代码 + 后处理是先进生产力的代表，可以提高开发、维护、部署效率，我们应该学习运用。
 
 <!-- page -->
 
+## Gulp
 
+1. Ant => Grunt => Gulp
+2. 速度快
+3. 用法简单，没有历史包袱
+
+<!-- page -->
+
+```javascript
+const gulp = require('gulp');
+const stylus = require('gulp-stylus');
+const cleanCSS = require('gulp-clean-css');
+
+gulp.task('stylus', () => {
+  return gulp.src('./styl/screen.styl')
+    .pipe(stylus())
+    .pipe(cleanCSS({
+      level: 2
+    }))
+    .pipe(gulp.dest('dist/screen.css'));
+});
+```
+
+<!-- page -->
+
+### 批处理
+
+```javascript
+gulp.task('stylus', () => {
+  // ....
+});
+
+gulp.task('webpack', () => {
+  // ....
+});
+
+gulp.task('html', () => {
+  // ....
+});
+
+gulp.task('default', ['stylus', 'webpack', 'html']);
+```
+
+<!-- page -->
+
+### 批处理顺序
+
+```javascript
+const sequence = require('run-sequence');
+const del = require('del');
+
+gulp.task('clear', () => {
+  del(['dist']);
+});
+
+gulp.task('default', callback => {
+  sequence(
+    'clear',
+    ['other', 'task'],
+    callback
+  );
+})
+```
+
+<!-- section -->
+
+任务完成的判定依据：
+
+1. `callback()`
+2. 返回 gulp 流
+3. 返回 Promise 对象
+
+<!-- page -->
+
+## Coding!
+
+<!-- page -->
+
+## 处理不同环境
+
+1. 不同的配置
+2. 适配不同平台
+3. 
+
+<!-- page -->
+
+### `webpack.DefinePlugin`
+
+```javascript
+const webpack = require('webpack');
+
+module.exports = {
+  ....
+  plugins: [
+    new webpack.DefinePlugin({
+      DEBUG: false,
+      VERSION: JSON.stringify('1.0.0'),
+      SUPPORT_ANDROID: false
+    })
+  ]
+};
+```
+
+<!-- page -->
+
+## Coding!
+
+<!-- page -->
+
+## 自动化代码审查
+
+1. 确保所有代码风格一致
+2. 加强团队配合能力
+
+<!-- page -->
+
+### ESLint
+
+1. 检查代码是否符合规范
+2. 执行最重要，有没有分号不重要
+
+<!-- section -->
+
+## Coding!
+
+<!-- page -->
+
+### [`pre-commit`](https://www.npmjs.com/package/pre-commit)
+
+利用 Git pre-commit 钩子，检查代码，不合规不入库
+
+<!-- section -->
+
+现实中：
+
+1. 从现在开始，先审查新代码
+2. 如果重构，把重构的代码拿来一起审查
+
+<!-- page -->
+
+## Coding!
+
+<!-- page -->
+
+## 总结
+
+1. 现代化前端开发，我们会写很多中间代码，需要批处理将其转换成最终代码
+2. 一些资源，也在此时进行处理
+3. 打包输出不同环境下的代码
+4. 代码入库之前要进行审查，保证规范执行
 
 <!-- page -->
 
@@ -881,6 +1030,7 @@ Q&A
 * [Using a package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
 * [阮一峰 测试框架 Mocha 实例教程](http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
 * [Babel 设置](https://babeljs.io/docs/setup/#installation)
+* [Run npm scripts in a git pre-commit Hook](http://elijahmanor.com/npm-precommit-scripts/)
 
 <!-- section -->
 
