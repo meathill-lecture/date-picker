@@ -18,13 +18,19 @@
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.24.1",
+    "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.5.1",
+    "babel-preset-env": "^1.5.2",
+    "colors.css": "^2.3.0",
+    "eslint": "^4.0.0",
+    "eslint-loader": "^1.8.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.4.2",
+    "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^3.0.0",
+    "handlebars": "^4.0.10",
+    "handlebars-loader": "^1.5.0",
     "pre-commit": "^1.2.2",
     "webpack": "^2.6.1",
     "webpack-stream": "^3.2.0"
