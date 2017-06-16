@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-core/register",
-    "stylus:watch": "mkdir css & stylus -w -m styl/ -o css/"
+    "stylus:watch": "mkdir css & stylus -w -m styl/ -o css/",
+    "lint": "eslint ./app --cache --ignore-pattern .gitignore"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "author": "Meathill <meathill@gmail.com> (http://meathill.com/)",
   "license": "MIT",
   "dependencies": {
@@ -17,6 +21,12 @@
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.5.1",
-    "webpack": "^2.6.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.2",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "pre-commit": "^1.2.2",
+    "webpack": "^2.6.1",
+    "webpack-stream": "^3.2.0"
   }
 }
