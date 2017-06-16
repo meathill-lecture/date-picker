@@ -2,8 +2,8 @@
  * Created by meathill on 2017/2/28.
  */
 
-import DatePicker from './DatePicker';
-import EasyDate from './EasyDate';
+import $ from 'jquery';
+import DatePicker from './date-picker';
 
 function max(array) {
   let last = array.pop();
@@ -105,7 +105,7 @@ class RangeDatePicker extends DatePicker {
         .addClass('end');
       li.addClass('select start tails');
     }
-    this.$el.find(`li[data-index]`)
+    this.$el.find('li[data-index]')
       .slice(Math.min(startIndex, index), Math.max(startIndex, index))
       .addClass('select');
     end = li;

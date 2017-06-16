@@ -5,6 +5,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
+/* global __dirname */
 module.exports = {
   entry: {
     'tqb-date-picker': './app/main.js'
@@ -21,6 +22,9 @@ module.exports = {
         loader: 'babel-loader'
       }
     ]
+  },
+  externals: {
+    'jquery': 'jQuery'
   },
   watch: true,
   watchOptions: {
