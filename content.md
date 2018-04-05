@@ -178,7 +178,6 @@ description: a full tutorail of date-picker
 1. 使用比较简单，嵌入资源文件即可
 2. 使用 jQuery，前后兼容性好，对方容易接手
 3. 源代码保持最大的弹性，方便扩展开发
-4.
 
 <!-- page -->
 
@@ -238,7 +237,7 @@ Node Package Manager = Node 包管理工具
 
 ### package.json
 
-此项目的配置信息，可被 NPM 读取。
+此项目的配置信息，可被 `npm` 读取。
 
 1. 版本、内容、作者等描述
 2. 依赖：运行时依赖 & 开发时依赖
@@ -1008,6 +1007,19 @@ module.exports = {
 
 ### 前情回顾
 
+[时光机](#/5/1)
+
+Note:
+我有一个朋友创业，他们公司后端实力很强，前端就比较一般。但是他们是一家2C的公司，基于微信做业务，所以迫切需要提升 Web 的用户体验。他们当时需求一个好用的日期选择组件，但是市面上暂时不好找；而且他们还有一些个性化的需求，即使找到了组件他们的前端也改不动。
+
+这是我的幸运，同时也是他们的不幸。
+
+（点击链接）好了，这就是他们的需求：（复述需求）
+
+我当时正好没工作，所以就接了这个活儿。活儿本身不复杂，我大约花了3~4个工作日就完成了，其中一天受困于一个诡异的 Bug。交付之后，朋友公司的前端小妹找到我，希望看看我的源码，学习一下。我当然就给她了，结果她看不明白，因为我使用了大量的工具，开发过程和传统的基于 jQuery 的开发很不一样。所以我就产生了做这样一个系列教程的想法，一方面有机会帮助很多人，另一方面将来内训也可以省去很多力气。
+
+前面我已经进行了4次分享，讲了从项目启动需求分析到结构搭建、CSS 预处理、编译、模板、打包、自动化测试，等等。这是我们第五次，也是原定最后一次分享，这次分享，我的目标是：
+
 <!-- page -->
 
 ## 教学目标
@@ -1027,23 +1039,162 @@ module.exports = {
 5. 制作文档
 6. 将文档发布到 GitHub Pages
 
+Note:
+为达到这个目标，我计划分这些章节。
+
 <!-- page -->
 
 ## JavaScript 的模块管理
 
 <!-- page -->
 
-一点点题外话
+### 模块管理的起源
 
 <!-- section -->
 
-## 现代化的开发工具体系
+程序员的基本原则：
 
-* DRY = Don't Repeat Yourself
-* 不要重复发明轮子
+DRY = Don't Repeat Yourself
 
 Note:
-作为一名程序员，我们应该谨记：Dont repeat yourself，不要重复你做过的工作。这一点非常重要，
+作为一名程序员，我们应该谨记：Dont repeat yourself，不要重复你做过的工作。这一点非常重要。只有程序员才有这样的能力；作为程序员，也只有这样，才能避免自己的精力和时间被重复性工作浪费掉。
+
+<!-- section -->
+
+早年的前端开发：
+
+1. 以全局使用为主
+2. 以复制粘贴为主
+
+<!-- section -->
+
+模块管理 = 使用写好的代码
+
+好处：
+
+1. 节省开发时间
+2. 节省测试时间
+3. 可以使用更小的粒度
+4. 可以版本管理
+
+<!-- page -->
+
+### 模块管理的发展
+
+<!-- section -->
+
+最早：
+
+1. AMD => require.js
+2. CMD => sea.js
+3. CommonJS => Node.js
+4. 全局，命名空间 => jQuery，Lodash/Underscore
+
+<!-- section -->
+
+接下来：
+
+1. AMD vs CMD
+2. Browserify
+3. Webpack
+
+<!-- section -->
+
+最终胜出者：Webpack
+
+优势：
+
+1. 海量 NPM
+2. 打包所有资源
+
+<!-- page -->
+
+## 现阶段的模块管理
+
+<!-- page -->
+
+### 全局
+
+1. 基于全局，可以有简单的命名空间
+2. 适用于羽量级项目
+3. 快捷方便，寿命最长，支持最多
+
+<!-- page -->
+
+### CommonJS
+
+1. `module.exports={}`
+2. 支持广泛，资源丰富
+3. 局部变量更方便
+
+<!-- page -->
+
+### ES6 Module
+
+1. CommonJS 的取代者
+2. 更严格，静态化，方便运行时优化
+3. 支持 `export default`
+4. 很容易转译成 CommonJS
+
+<!-- page -->
+
+## Coding!
+
+<!-- page -->
+
+## 将代码发布到 NPM
+
+Note:
+“不到长城非好汉”，相信前端同学也会有“不发NPM也遗憾”的想法。
+
+<!-- page -->
+
+### package.json
+
+1. version 版本
+2. main 入口
+
+### .npmignore
+
+1. 可以忽略，此时会使用 .gitignore
+2. 如有，则忽略 .gitignore
+3. 建议只包含必要的文件，或编译后的文件
+
+<!-- page -->
+
+## Coding!
+
+<!-- page -->
+
+## 制作文档
+
+1. 详细的文档非常必要
+2. 好的文档对产品推广帮助巨大
+3. 建议使用 markdown 维护文档
+
+<!-- page -->
+
+### Makrdown 的好处
+
+1. 语法简单，结构和纯文本类似
+2. 可以转换成 HTML，表现力丰富
+3. 支持内嵌 HTML
+
+<!-- page -->
+
+## Coding!
+
+<!-- page -->
+
+## 使用 GitHub Pages 托管静态网站
+
+1. GitHub Pages 是 GitHub 提供的免费静态网站托管服务
+2. 可以为任何仓库创建静态网站
+3. 也可以为组织或个人创建静态网站
+
+<!-- page -->
+
+## Coding!
 
 <!-- page -->
 
@@ -1054,7 +1205,7 @@ Q&A
 完整项目代码仓库：
 
 * [Github meathill-freelance/date-picker](https://github.com/meathill-freelance/date-picker)
-* [线上文档](https://meathill-freelance.github.io/data-picker/)
+* [线上文档](https://meathill-freelance.github.io/date-picker/)
 
 <!-- page -->
 
@@ -1093,3 +1244,9 @@ Q&A
 ### 图书篇
 
 * [JavaScript 设计模式](https://www.amazon.cn/图书/dp/B00D6MT3LG/ref=sr_1_3?ie=UTF8&qid=1496569116&sr=8-3&keywords=javascript+设计模式)
+
+<!-- section -->
+
+### Debug 篇
+
+* [一个超级诡异的 iOS Safari `position: fixed` 失效问题](https://blog.meathill.com/tech/fe/css/a-super-weird-ios-safari-postion-fixed-issue.html)
