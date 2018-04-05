@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --require babel-core/register",
     "stylus:watch": "mkdir css & stylus -w -m styl/ -o css/",
-    "lint": "eslint ./app --cache --ignore-pattern .gitignore"
+    "lint": "eslint ./app --cache --ignore-pattern .gitignore",
+    "dev": "node live-server.js"
   },
   "pre-commit": [
     "lint"
@@ -18,21 +19,21 @@
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.5.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
     "colors.css": "^2.3.0",
-    "eslint": "^4.0.0",
-    "eslint-loader": "^1.8.0",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^2.0.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.4.2",
+    "gulp-clean-css": "^3.9.3",
     "gulp-rename": "^1.2.2",
-    "gulp-stylus": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
-    "handlebars": "^4.0.10",
-    "handlebars-loader": "^1.5.0",
+    "gulp-stylus": "^2.7.0",
+    "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.7.0",
+    "live-server": "^1.2.0",
     "pre-commit": "^1.2.2",
     "webpack": "^4.5.0",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^4.0.3"
   }
 }
