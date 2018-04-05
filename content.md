@@ -39,7 +39,7 @@ description: a full tutorail of date-picker
 <!-- section -->
 
 11. Gulp 打包
-12. 配置 Webpack 适应不同环境的打包 
+12. 配置 Webpack 适应不同环境的打包
 13. 使用 Weinre 解决微信下的问题
 <!-- .elment: start="11" -->
 
@@ -178,7 +178,7 @@ description: a full tutorail of date-picker
 1. 使用比较简单，嵌入资源文件即可
 2. 使用 jQuery，前后兼容性好，对方容易接手
 3. 源代码保持最大的弹性，方便扩展开发
-4. 
+4.
 
 <!-- page -->
 
@@ -300,10 +300,10 @@ Node Package Manager = Node 包管理工具
 
 <!-- section -->
 
-ES 
+ES
 
 = ECMAScript
- 
+
 = 由 ECMA 国际（前身为欧洲计算机制造商协会）通过 ECMA-262标准化的脚本程序设计语言。
 
 <!-- section -->
@@ -354,18 +354,18 @@ ES
 
 > ES2015 增加了很多优秀的新特性，可以让我们开发出更强壮，更好维护的代码。
 
-> 以后的开发，都应当以 ES2015 为基础。 
+> 以后的开发，都应当以 ES2015 为基础。
 
-<!-- page --> 
+<!-- page -->
 
 ## ES2015 新特性
- 
+
 <!-- page -->
- 
+
 ### `let` & `const`
- 
-1. 声明变量 `let a = 1;` 
-2. 声明常量 `const B = 2;` 
+
+1. 声明变量 `let a = 1;`
+2. 声明常量 `const B = 2;`
 3. 块级作用域 [code](./sample/let-const.js)
 4. 没有变量提升 [code](./sample/let-const-2.js)
 
@@ -402,7 +402,7 @@ let [a, , b] = [1, 2, 3];
 <!-- section -->
 
 解构对象
- 
+
 ```javascript
 let {a, b, c} = {a: 1, b: 2, c: 3};
 // a = 1
@@ -483,17 +483,17 @@ let f4 = ([p1, p2]) => {
 class A {
   constructor() {
     // 构造函数
-    
+
     // 声明实例属性
     this.var = '';
   }
-  
+
   method1() {
-    
+
   }
-  
+
   method2() {
-    
+
   }
 }
 ```
@@ -662,7 +662,7 @@ assert.equal(1, '1'); // 1 == '1' true
 
 <!-- page -->
 
-## Webpack 
+## Webpack
 
 Webpack 是一个打包工具，降低 Web 中加载资源的难度。
 
@@ -706,7 +706,7 @@ Babel 是一个转译工具，将高版本的 JS 转译成低版本的 JS。亦�
 <!-- page -->
 
 ## 配置环境
- 
+
 <!-- page -->
 
 ## Coding
@@ -924,7 +924,7 @@ gulp.task('default', callback => {
 
 1. 不同的配置
 2. 适配不同平台
-3. 
+3.
 
 <!-- page -->
 
@@ -1006,15 +1006,44 @@ module.exports = {
 
 <!-- page -->
 
-### 前倾回顾
+### 前情回顾
 
 <!-- page -->
 
 ## 教学目标
 
+1. 理解 JS 模块管理
+2. 学会使用 GitHub Pages
+3. 学会发布 NPM 模块
+
 <!-- page -->
 
 ## 课程大纲
+
+1. JavaScript 的模块管理
+2. 三种主流模块模型的特点
+3. 打包输出同时支持三种模型的代码
+4. 将代码发布到 NPM
+5. 制作文档
+6. 将文档发布到 GitHub Pages
+
+<!-- page -->
+
+## JavaScript 的模块管理
+
+<!-- page -->
+
+一点点题外话
+
+<!-- section -->
+
+## 现代化的开发工具体系
+
+* DRY = Don't Repeat Yourself
+* 不要重复发明轮子
+
+Note:
+作为一名程序员，我们应该谨记：Dont repeat yourself，不要重复你做过的工作。这一点非常重要，
 
 <!-- page -->
 
