@@ -15,21 +15,22 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader', 'eslint-loader']
+        use: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.hbs$/,
-        loader: 'handlebars-loader'
+        use: 'handlebars-loader'
       }
     ]
   },
   externals: {
     'jquery': 'jQuery'
   },
+  mode: 'development',
   watch: true,
   watchOptions: {
     ignored: /node_modules|dist|build|docs|css/,

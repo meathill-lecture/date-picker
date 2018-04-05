@@ -9,7 +9,6 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
-const uglify = require('gulp-uglify');
 const sequence = require('run-sequence').use(gulp);
 
 const DOC = 'docs/';
@@ -36,7 +35,6 @@ gulp.task('webpack', () => {
     .pipe(webpackStream(require('./webpack.config.prod'), webpack))
     .pipe(rename('tqb-date-picker.js'))
     .pipe(gulp.dest(toPath))
-    .pipe(uglify())
     .pipe(rename('tqb-date-picker.min.js'))
     .pipe(gulp.dest(toPath));
 });

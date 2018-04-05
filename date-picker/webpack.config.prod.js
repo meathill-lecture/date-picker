@@ -7,6 +7,7 @@ const webpack = require('webpack');
 
 config.devtool = false;
 config.watch = false;
+config.mode = 'production';
 config.plugins = [
   new webpack.DefinePlugin({
     DEBUG: false
