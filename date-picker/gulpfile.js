@@ -31,7 +31,7 @@ gulp.task('stylus', () => {
 
 gulp.task('webpack', () => {
   let toPath = DOC + 'js';
-  return gulp.src('./app/main.js')
+  return gulp.src('./app/index.js')
     .pipe(webpackStream(require('./webpack.config.prod'), webpack))
     .pipe(rename('tqb-date-picker.js'))
     .pipe(gulp.dest(toPath))

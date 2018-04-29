@@ -8,12 +8,15 @@ const webpack = require('webpack');
 /* global __dirname */
 module.exports = {
   entry: {
-    'tqb-date-picker': './app/main.js'
+    'tqb-date-picker': './app/index.js'
   },
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'tqbDatePicker',
+    libraryTarget: 'umd',
   },
+  target: 'node',
   module: {
     rules: [
       {
