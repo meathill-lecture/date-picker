@@ -1468,7 +1468,39 @@ Angular 劣势
 
 <!-- page -->
 
+### 渐进式升级
+
+1. Vue 支持全局使用
+2. 全局注册组件可以和 jQuery 混用
+3. 不要着急，慢慢来，渐进式升级
+
+<!-- page -->
+
 ## Coding!
+
+<!-- page -->
+
+## 总结
+
+1. 不再操作 DOM，只操作数据
+2. 数据分为渲染用和逻辑用
+3. `value` 拆成本地和外部
+
+<!-- page -->
+
+## 课后练习
+
+1. 完成 RangeDatePicker 的重构
+2. 把动画效果加回来
+3. 使用 webpack 把所有资源放在一起
+
+<!-- section -->
+
+欢迎通过 PR 的方式提交作业：
+
+https://github.com/meathill-freelance/date-picker
+
+我承诺会及时 review 代码。通过后，送 ￥100 以内的书。
 
 <!-- page -->
 
