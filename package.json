@@ -26,7 +26,7 @@
     "gulp-replace": "^0.6.1",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.1",
-    "highlight.js": "^9.13.0",
+    "highlight.js": "^9.14.2",
     "marked": "^0.3.19",
     "meathill-reveal-theme": "^0.2.2",
     "reveal-markdown-compiler": "^2.2.3",
