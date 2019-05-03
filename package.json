@@ -20,16 +20,15 @@
   "devDependencies": {
     "del": "^3.0.0",
     "font-awesome": "^4.7.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.1",
     "gulp-clean-css": "^3.10.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^0.6.1",
     "gulp-stylus": "^2.7.0",
-    "gulp-uglify": "^3.0.1",
-    "highlight.js": "^9.14.2",
-    "marked": "^0.3.19",
+    "gulp-uglify": "^3.0.2",
+    "highlight.js": "^9.15.6",
+    "marked": "^0.6.2",
     "meathill-reveal-theme": "^0.2.2",
-    "reveal-markdown-compiler": "^2.2.3",
-    "reveal.js": "^3.7.0"
+    "reveal.js": "^3.8.0"
   }
 }
