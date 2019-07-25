@@ -24,10 +24,10 @@
     "gulp-clean-css": "^3.10.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^0.6.1",
-    "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.2",
+    "css-loader": "^3.1.0",
     "highlight.js": "^9.15.8",
-    "marked": "^0.6.2",
+    "marked": "^0.6.3",
     "meathill-reveal-theme": "^0.2.2",
     "reveal.js": "^3.8.0"
   }
