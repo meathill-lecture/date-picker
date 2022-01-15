@@ -19,7 +19,7 @@
   "homepage": "https://meathill-lecture.github.io/date-picker/",
   "devDependencies": {
     "highlight.js": "^10.7.2",
-    "marked": "^2.0.3",
+    "marked": "^4.0.10",
     "meathill-reveal-theme": "^0.2.2",
     "reveal.js": "^4.1.0"
   }
