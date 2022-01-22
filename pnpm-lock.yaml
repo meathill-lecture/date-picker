@@ -1,0 +1,42 @@
+lockfileVersion: 5.3
+
+specifiers:
+  highlight.js: ^11.4.0
+  marked: ^4.0.10
+  meathill-reveal-theme: ^0.2.2
+  reveal.js: ^4.2.1
+
+devDependencies:
+  highlight.js: 11.4.0
+  marked: 4.0.10
+  meathill-reveal-theme: 0.2.2
+  reveal.js: 4.2.1
+
+packages:
+
+  /colors.css/2.3.0:
+    resolution: {integrity: sha1-6JU4N1Q+GdmOKRf/C5mPbbKGITs=}
+    engines: {node: '>=0.10.22'}
+    dev: true
+
+  /highlight.js/11.4.0:
+    resolution: {integrity: sha512-nawlpCBCSASs7EdvZOYOYVkJpGmAOKMYZgZtUqSRqodZE0GRVcFKwo1RcpeOemqh9hyttTdd5wDBwHkuSyUfnA==}
+    engines: {node: '>=12.0.0'}
+    dev: true
+
+  /marked/4.0.10:
+    resolution: {integrity: sha512-+QvuFj0nGgO970fySghXGmuw+Fd0gD2x3+MqCWLIPf5oxdv1Ka6b2q+z9RP01P/IaKPMEramy+7cNy/Lw8c3hw==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: true
+
+  /meathill-reveal-theme/0.2.2:
+    resolution: {integrity: sha512-vNIEjF3Lrkxp53kyiRtUw+CabH8liZvXcg8L/qgE3UDosfE6PRk9DqOviPZfR9K8fRh1/YBmQGZYEczXH56wFQ==}
+    dependencies:
+      colors.css: 2.3.0
+    dev: true
+
+  /reveal.js/4.2.1:
+    resolution: {integrity: sha512-OXH4qT5Gs9di6lZPDmRuanIvdiVzltCe8W9ELz6Q3EhoWS+RjRp5HBwFHr+k1fbbP82/Z83sQiK+/ZYFBwrrsQ==}
+    engines: {node: '>=10.0.0'}
+    dev: true
